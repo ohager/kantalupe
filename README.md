@@ -1,12 +1,13 @@
 kantalupe
 =========
 
-An intuive desktop editor for creating model-based questionnaires. 
+An easy-to-use editor for creating model-based questionnaires. 
 
 The idea is to create surveys/questionnaires based on a priorly created model.
-The model, which is also editable in kantalupe, can be reused for build manually
-surveys, i.e. subsets of the model. Additionally, a ECMA-Script-Engine allows
-automatic creation of surveys.
+The model, which is also editable in kantalupe, can be reused for creating surveys
+as subsets of the model. The creation of surveys can be done manually using drag&drop, 
+and/or automatically using the integrated JavaScript-Engine. Once created the surveys can
+be saved (as XML) or exported to several different format, like LimeSurvey, QueXML etc.
 
 Features from the user's point of view:
 
