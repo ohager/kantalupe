@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <!-- type definitions -->
+
+  <xs:complexType name="LabelType">
+    <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="id" use="required" type="xs:unsignedInt"/>
+    </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="PropertyListType">
+    <xs:sequence>
+      <xs:element name="Property" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="key" use="required" type="xs:NCName"/>
+              <xs:attribute name="value" use="required" type="xs:string"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="jProposalType">
+    <xs:sequence>
+      <xs:element name="Label" minOccurs="0" maxOccurs="unbounded" type="LabelType"/>
+    </xs:sequence>
+    <xs:attribute name="mc" use="required" type="xs:boolean"/>
+    <xs:attribute name="qname" use="required" type="xs:ID"/>
+  </xs:complexType>
+
+  <xs:complexType name="ImageListType">
+    <xs:sequence>
+      <xs:element name="Image" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="id" use="required" type="xs:unsignedInt"/>
+              <xs:attribute name="uri" use="required" type="xs:anyURI"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="jGroupType">
+    <xs:sequence>
+      <xs:element name="PropertyList" type="PropertyListType"/>
+      <xs:element name="SourceList" minOccurs="0" maxOccurs="1">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="SourceRef" minOccurs="1" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:attribute name="qnameref" type="xs:IDREF"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="Description" type="xs:string"/>
+      <xs:element name="ImageList" type="ImageListType"/>
+      <xs:element name="Text" type="xs:string"/>
+      <xs:element name="Hint" type="xs:string"/>
+      <xs:element name="jProposal">
+        <xs:complexType>
+          <xs:complexContent>
+            <xs:extension base="jProposalType">
+              <xs:sequence>
+                <xs:element name="jProposalRef" minOccurs="0" maxOccurs="1">
+                  <xs:complexType>
+                    <xs:attribute name="qnameref" use="required" type="xs:IDREF"/>
+                  </xs:complexType>
+                </xs:element>
+              </xs:sequence>
+            </xs:extension>
+          </xs:complexContent>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="jProblemList">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="jProblem" minOccurs="1" maxOccurs="unbounded">
+              <xs:complexType>
+                <xs:sequence>
+                  <xs:element name="PropertyList" type="PropertyListType"/>
+                  <xs:element name="Text" type="xs:string"/>
+                  <xs:element name="Solution" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                      <!-- no content at all -->
+                      <xs:attribute name="idref" type="xs:unsignedInt"/>
+                    </xs:complexType>
+                  </xs:element>
+                </xs:sequence>
+                <xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+              </xs:complexType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="id" use="required" type="xs:unsignedInt"/>
+    <xs:attribute name="name" use="required" type="xs:string"/>
+  </xs:complexType>
+
+  <xs:complexType name="CategoryType">
+    <xs:sequence>
+      <xs:element name="PropertyList" type="PropertyListType"/>
+      <xs:element name="Description" type="xs:string"/>
+      <xs:element name="Category" minOccurs="0" maxOccurs="unbounded" type="CategoryType"/>
+      <!-- recursive -->
+      <xs:element name="jGroup" minOccurs="0" maxOccurs="unbounded" type="jGroupType"/>
+    </xs:sequence>
+    <xs:attribute name="id" use="required" type="xs:nonNegativeInteger"/>
+    <xs:attribute name="name" use="required" type="xs:string"/>
+  </xs:complexType>
+
+  <!-- element definitions -->
+
+
+  <xs:element name="kmx">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="References">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RefSourceList">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Source" minOccurs="0" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="PropertyList" type="PropertyListType"/>
+                        </xs:sequence>
+                        <xs:attribute name="qname" use="required" type="xs:ID"/>
+                        <xs:attribute name="uri" use="required" type="xs:anyURI"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="RefProposalTypeList">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="jProposalList">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="jProposal" minOccurs="0" maxOccurs="unbounded"
+                            type="jProposalType"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <!-- References end -->
+
+        <xs:element name="Content">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Category"  type="CategoryType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+      </xs:sequence>
+      <xs:attribute name="name" use="required" type="xs:string"/>
+      <xs:attribute name="version" use="required" type="xs:string"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

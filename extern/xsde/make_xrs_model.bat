@@ -1,0 +1,1 @@
+xsde cxx-hybrid --show-sloc --generate-inline --generate-aggregate --generate-parser --no-long-long --output-dir ./xrs --root-element xrs xrs.xsd 

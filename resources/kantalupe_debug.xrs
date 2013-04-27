@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="xrs.xsd"
+ id="kantalupe"
+ version="1.0">
+    <ResourceSet prefix="general">
+		<Resource type="file" alias="stylesheet">./resources/kantalupe.qss</Resource>
+    </ResourceSet>
+	<ResourceSet prefix="image">
+		<Resource type="image" alias="logo">./resources/images/cantaloupe3.png</Resource>
+	</ResourceSet>
+
+  <ResourceSet prefix="modelstyle">
+	<!-- colors are from http://www.w3.org/TR/css3-color/#html4 -->
+	<Resource type="text" alias="modelcolor_bg">white</Resource>
+	<Resource type="text" alias="categorycolor_bg">skyblue</Resource>
+	<Resource type="text" alias="groupcolor_bg">gold</Resource>
+	<Resource type="text" alias="matrixcolor_bg">khaki</Resource>
+	<Resource type="text" alias="problemcolor_bg">lemonchiffon</Resource>
+
+	<Resource type="text" alias="modelcolor_fg">black</Resource>
+	<Resource type="text" alias="categorycolor_fg">black</Resource>
+	<Resource type="text" alias="groupcolor_fg">black</Resource>
+	<Resource type="text" alias="matrixcolor_fg">black</Resource>
+	<Resource type="text" alias="problemcolor_fg">black</Resource>
+
+	<!-- text size in pt -->
+	<Resource type="text" alias="modeltextsize">14</Resource>
+	<Resource type="text" alias="categorytextsize">12</Resource>
+	<Resource type="text" alias="grouptextsize">10</Resource>
+	<Resource type="text" alias="matrixtextsize">10</Resource>
+	<Resource type="text" alias="problemtextsize">10</Resource>
+
+	<!-- values: normal, bold, italic - the both latter can be combined, e.g. 'italic, bold' -->
+	<Resource type="text" alias="modeltextstyle">bold,italic</Resource>
+	<Resource type="text" alias="categorytextstyle">bold</Resource>
+	<Resource type="text" alias="grouptextstyle">bold</Resource>
+	<Resource type="text" alias="matrixtextstyle">italic</Resource>
+	<Resource type="text" alias="problemtextstyle">normal</Resource>
+
+	<!-- values: center, left, right -->
+	<Resource type="text" alias="modeltextalign">center</Resource>
+	<Resource type="text" alias="categorytextalign">left</Resource>
+	<Resource type="text" alias="grouptextalign">left</Resource>
+	<Resource type="text" alias="matrixtextalign">center</Resource>
+	<Resource type="text" alias="problemtextalign">left</Resource>
+
+
+  </ResourceSet>
+  
+  <ResourceSet prefix="icon">
+		<Resource type="image" alias="noimage">./resources/images/no_image.png</Resource>
+		<Resource type="image" alias="lupe">./resources/images/lupe24x24.png</Resource>
+		<Resource type="image" alias="drop">./resources/images/green_arrow_down32x32.png</Resource>
+		<Resource type="image" alias="newtask">./resources/images/newtask.png</Resource>
+		<Resource type="image" alias="exporttask">./resources/images/export.png</Resource>
+		<Resource type="image" alias="extrastask">./resources/images/extras.png</Resource>
+		<Resource type="image" alias="expertmode">./resources/images/expert.png</Resource>
+		<Resource type="image" alias="easymode">./resources/images/novice.png</Resource>
+
+		<Resource type="image" alias="itemeditormodel">./resources/images/novice.png</Resource>
+		<Resource type="image" alias="itemeditormatrix">./resources/images/novice.png</Resource>
+		<Resource type="image" alias="itemeditormatrixproblem">./resources/images/novice.png</Resource>
+		<Resource type="image" alias="itemeditorgroup">./resources/images/novice.png</Resource>
+		<Resource type="image" alias="itemeditorcategory">./resources/images/novice.png</Resource>
+		<Resource type="image" alias="itemeditorquestion">./resources/images/novice.png</Resource>
+		<Resource type="image" alias="itemeditorprops">./resources/images/novice.png</Resource>
+		<Resource type="image" alias="itemeditoranswer">./resources/images/novice.png</Resource>
+
+		<Resource type="image" alias="false">./resources/images/false.png</Resource>
+		<Resource type="image" alias="correct">./resources/images/correct.png</Resource>
+  </ResourceSet>
+  <ResourceSet prefix="task">
+	  <Resource type="image" alias="newproject">./resources/images/model.png</Resource>
+	  <Resource type="image" alias="newsurvey">./resources/images/model.png</Resource>
+	  <Resource type="image" alias="newmodel">./resources/images/model.png</Resource>
+
+    </ResourceSet>
+</xrs>

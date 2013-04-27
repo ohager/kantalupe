@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<KModel name="Test Model" version="1">
+	<Functional>
+		<UidGeneration mode="manual"/>
+	</Functional>
+	<Content>
+		<Category name="New category name">
+			<Description>New category description</Description>
+			<PropertyList/>
+			<Problem uid="dgdfhd" multiple="true">
+				<PropertyList/>
+				<Text>New problem textdfhdrh</Text>
+				<Hint></Hint>
+				<ImageList/>
+				<ProposalList>
+					<Proposal id="1">New proposal</Proposal>
+					<Proposal id="2">New proposal</Proposal>
+					<Proposal id="3">New proposal</Proposal>
+				</ProposalList>
+				<SolutionList>
+					<Solution idref="1"/>
+					<Solution idref="3"/>
+				</SolutionList>
+			</Problem>
+			<Matrix name="This is a matrix item" multiple="true">
+				<PropertyList>
+					<Property key="key" value="value">here is the description</Property>
+				</PropertyList>
+				<Text>And the matrix text is here</Text>
+				<Hint>Here you may put some additional hint, e.g. how to understand the question or what to do or</Hint>
+				<ImageList>
+					<Image>E:\coding\projects\clayhouse\claylab\kantalupe2\trunk\kantalupe_edit\resources\images\export.png</Image>
+					<Image>E:\coding\projects\clayhouse\claylab\kantalupe2\trunk\kantalupe_edit\resources\images\view_model.png</Image>
+				</ImageList>
+				<ProposalList>
+					<Proposal id="1">New proposal text</Proposal>
+					<Proposal id="2">New proposal text 2</Proposal>
+					<Proposal id="3">New proposal</Proposal>
+				</ProposalList>
+				<MatrixProblem uid="cbxcbdxb">
+					<PropertyList/>
+					<Text>New matrix problem text</Text>
+					<SolutionList>
+						<Solution idref="1"/>
+					</SolutionList>
+				</MatrixProblem>
+				<MatrixProblem uid="yxdvbds">
+					<PropertyList/>
+					<Text>New matrix problem text</Text>
+					<SolutionList>
+						<Solution idref="2"/>
+					</SolutionList>
+				</MatrixProblem>
+			</Matrix>
+			<Category name="New category name">
+				<Description>New category description</Description>
+				<PropertyList/>
+				<Group name="New group name">
+					<Description>New group description</Description>
+					<PropertyList/>
+					<Problem uid="#UID" multiple="true">
+						<PropertyList/>
+						<Text>New problem text</Text>
+						<Hint></Hint>
+						<ImageList/>
+						<ProposalList/>
+						<SolutionList/>
+					</Problem>
+					<Problem uid="#UID" multiple="true">
+						<PropertyList/>
+						<Text>New problem text</Text>
+						<Hint></Hint>
+						<ImageList/>
+						<ProposalList/>
+						<SolutionList/>
+					</Problem>
+					<Problem uid="#UID" multiple="true">
+						<PropertyList/>
+						<Text>New problem text</Text>
+						<Hint></Hint>
+						<ImageList/>
+						<ProposalList/>
+						<SolutionList/>
+					</Problem>
+					<Problem uid="#UID" multiple="true">
+						<PropertyList/>
+						<Text>New problem text</Text>
+						<Hint></Hint>
+						<ImageList/>
+						<ProposalList/>
+						<SolutionList/>
+					</Problem>
+				</Group>
+			</Category>
+		</Category>
+	</Content>
+</KModel>

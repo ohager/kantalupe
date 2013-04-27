@@ -1,0 +1,33 @@
+k--ModelViewReadOnly::branch:open{
+	image: none
+}
+
+k--ModelViewReadOnly::branch:close{
+	image: none
+}
+
+k--SurveyView::branch:open{
+	image: none
+}
+
+k--SurveyView::branch:close{
+	image: none
+}
+
+
+ QSplitter::handle {
+	background: black;
+	height: 1px;
+	width: 1px;
+ }
+
+k--Overlay{
+	color: rgba(200, 200, 200, 75%);
+	font-weight: bold;
+}
+
+k--DropIndicator > QWidget#text{
+	color: #AAAAAA;
+}
+
+

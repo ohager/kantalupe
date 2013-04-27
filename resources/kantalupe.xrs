@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xrs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="xrs.xsd"
+ id="kantalupe"
+ version="1.0">
+    <ResourceSet prefix="general">
+		<Resource type="file" alias="stylesheet">../resources/kantalupe.qss</Resource>
+		<Resource type="text" alias="pluginbasedir">./plugins</Resource>
+
+    </ResourceSet>
+
+	<ResourceSet prefix="pluginexport">
+		<Resource type="text" alias="directory">export</Resource>
+		<Resource type="image" alias="limesurvey">../resources/images/limesurvey_64px.png</Resource>
+		<Resource type="image" alias="quexml">../resources/images/quexml_acspri_logo.png</Resource>
+		<Resource type="image" alias="smssurvey">../resources/images/droid.png</Resource>
+	</ResourceSet>
+
+	<ResourceSet prefix="script">
+		<Resource type="text" alias="deploydir">./scripts/deployed</Resource>
+		<Resource type="text" alias="draftdir">./scripts/drafts</Resource>
+		<Resource type="file" alias="template_api_lvl1">./scripts/kscript_tmplt_api_lvl1.txt</Resource>
+	</ResourceSet>
+
+
+	<ResourceSet prefix="image">
+		<Resource type="image" alias="logo">../resources/images/delete.png</Resource>
+	</ResourceSet>
+
+	<ResourceSet prefix="animation">
+		<Resource type="image" alias="loading">../resources/images/busy.gif</Resource>
+	</ResourceSet>
+
+	<!-- style for survey view -->
+  <ResourceSet prefix="surveystyle">
+
+	<!-- Note: The drop color is semitransparent, i.e. 50% transparent-->
+	<Resource type="text" alias="itemdropcolor">darkgreen</Resource>
+
+	<!-- colors are from http://www.w3.org/TR/css3-color/#html4 -->
+	<Resource type="text" alias="surveycolor_bg">white</Resource>
+	<Resource type="text" alias="categorycolor_bg">skyblue</Resource>
+	<Resource type="text" alias="groupcolor_bg">gold</Resource>
+	<Resource type="text" alias="matrixcolor_bg">khaki</Resource>
+	<Resource type="text" alias="matrixproblemcolor_bg">khaki</Resource>
+	<Resource type="text" alias="problemcolor_bg">lemonchiffon</Resource>
+
+	<Resource type="text" alias="surveycolor_fg">black</Resource>
+	<Resource type="text" alias="categorycolor_fg">black</Resource>
+	<Resource type="text" alias="groupcolor_fg">black</Resource>
+	<Resource type="text" alias="matrixcolor_fg">black</Resource>
+	<Resource type="text" alias="matrixproblemcolor_fg">black</Resource>
+	<Resource type="text" alias="problemcolor_fg">black</Resource>
+
+	<!-- text size in pt -->
+	<Resource type="text" alias="surveytextsize">14</Resource>
+	<Resource type="text" alias="categorytextsize">12</Resource>
+	<Resource type="text" alias="grouptextsize">10</Resource>
+	<Resource type="text" alias="matrixtextsize">10</Resource>
+	<Resource type="text" alias="matrixproblemtextsize">black</Resource>
+	<Resource type="text" alias="problemtextsize">10</Resource>
+
+	<!-- values: normal, bold, italic - the both latter can be combined, e.g. 'italic, bold' -->
+	<Resource type="text" alias="surveytextstyle">bold,italic</Resource>
+	<Resource type="text" alias="categorytextstyle">bold</Resource>
+	<Resource type="text" alias="grouptextstyle">bold</Resource>
+	<Resource type="text" alias="matrixtextstyle">italic</Resource>
+	<Resource type="text" alias="matrixproblemtextstyle">normal</Resource>
+	<Resource type="text" alias="problemtextstyle">normal</Resource>
+
+	<!-- values: center, left, right -->
+	<Resource type="text" alias="surveytextalign">center</Resource>
+	<Resource type="text" alias="categorytextalign">left</Resource>
+	<Resource type="text" alias="grouptextalign">left</Resource>
+	<Resource type="text" alias="matrixtextalign">center</Resource>
+	<Resource type="text" alias="matrixproblemtextalign">left</Resource>
+	<Resource type="text" alias="problemtextalign">left</Resource>
+  </ResourceSet>
+
+
+	<!-- style for survey view -->
+  <ResourceSet prefix="modelstyle">
+
+	<!-- Note: The drop color is semitransparent, i.e. 50% transparent-->
+	<Resource type="text" alias="itemdropcolor">darkgreen</Resource>
+
+	<!-- colors are from http://www.w3.org/TR/css3-color/#html4 -->
+	<Resource type="text" alias="modelcolor_bg">white</Resource>
+	<Resource type="text" alias="categorycolor_bg">skyblue</Resource>
+	<Resource type="text" alias="groupcolor_bg">gold</Resource>
+	<Resource type="text" alias="matrixcolor_bg">khaki</Resource>
+	<Resource type="text" alias="matrixproblemcolor_bg">khaki</Resource>
+	<Resource type="text" alias="problemcolor_bg">lemonchiffon</Resource>
+
+	<Resource type="text" alias="modelcolor_fg">black</Resource>
+	<Resource type="text" alias="categorycolor_fg">black</Resource>
+	<Resource type="text" alias="groupcolor_fg">black</Resource>
+	<Resource type="text" alias="matrixcolor_fg">black</Resource>
+	<Resource type="text" alias="matrixproblemcolor_fg">black</Resource>
+	<Resource type="text" alias="problemcolor_fg">black</Resource>
+
+	<!-- text size in pt -->
+	<Resource type="text" alias="modeltextsize">14</Resource>
+	<Resource type="text" alias="categorytextsize">12</Resource>
+	<Resource type="text" alias="grouptextsize">10</Resource>
+	<Resource type="text" alias="matrixtextsize">10</Resource>
+	<Resource type="text" alias="matrixproblemtextsize">black</Resource>
+	<Resource type="text" alias="problemtextsize">10</Resource>
+
+	<!-- values: normal, bold, italic - the both latter can be combined, e.g. 'italic, bold' -->
+	<Resource type="text" alias="modeltextstyle">bold,italic</Resource>
+	<Resource type="text" alias="categorytextstyle">bold</Resource>
+	<Resource type="text" alias="grouptextstyle">bold</Resource>
+	<Resource type="text" alias="matrixtextstyle">italic</Resource>
+	<Resource type="text" alias="matrixproblemtextstyle">normal</Resource>
+	<Resource type="text" alias="problemtextstyle">normal</Resource>
+
+	<!-- values: center, left, right -->
+	<Resource type="text" alias="modeltextalign">center</Resource>
+	<Resource type="text" alias="categorytextalign">left</Resource>
+	<Resource type="text" alias="grouptextalign">left</Resource>
+	<Resource type="text" alias="matrixtextalign">center</Resource>
+	<Resource type="text" alias="matrixproblemtextalign">left</Resource>
+	<Resource type="text" alias="problemtextalign">left</Resource>
+  </ResourceSet>
+
+  
+  <ResourceSet prefix="icon">
+		<Resource type="image" alias="noimage">../resources/images/no_image.png</Resource>
+		<Resource type="image" alias="lupe">../resources/images/lupe24x24.png</Resource>
+		<Resource type="image" alias="drop">../resources/images/green_arrow_down32x32.png</Resource>
+		<Resource type="image" alias="newtask">../resources/images/process.png</Resource>
+		<Resource type="image" alias="exporttask">../resources/images/box_upload_48.png</Resource>
+		<Resource type="image" alias="extrastask">../resources/images/extras.png</Resource>
+		<Resource type="image" alias="expertmode">../resources/images/expert.png</Resource>
+		<Resource type="image" alias="easymode">../resources/images/novice.png</Resource>
+
+		<Resource type="image" alias="surveyexporterexport">../resources/images/box_upload_48.png</Resource>
+
+		<Resource type="image" alias="surveyeditorsurvey">../resources/images/survey.png</Resource>
+		<Resource type="image" alias="surveyeditorsurveymeta">../resources/images/survey.png</Resource>
+		<Resource type="image" alias="surveyeditorgenerator">../resources/images/process.png</Resource>
+		<Resource type="image" alias="surveyeditorscript">../resources/images/page_edit.png</Resource>
+
+		<Resource type="image" alias="itemeditormodel">../resources/images/calendar_background.png</Resource>
+		<Resource type="image" alias="itemeditormatrix">../resources/images/folder_add.png</Resource>
+		<Resource type="image" alias="itemeditormatrixproblem">../resources/images/page_edit.png</Resource>
+		<Resource type="image" alias="itemeditorgroup">../resources/images/folder.png</Resource>
+		<Resource type="image" alias="itemeditorcategory">../resources/images/window.png</Resource>
+		<Resource type="image" alias="itemeditorproblem">../resources/images/page_edit.png</Resource>
+		<Resource type="image" alias="itemeditorprops">../resources/images/new_page.png</Resource>
+		<Resource type="image" alias="itemeditoranswer">../resources/images/new_page.png</Resource>
+
+		<Resource type="image" alias="scripteditorrun">../resources/images/process.png</Resource>
+		<Resource type="image" alias="scripteditornew">../resources/images/new_page.png</Resource>
+		<Resource type="image" alias="scripteditorload">../resources/images/box_upload_48.png</Resource>
+		<Resource type="image" alias="scripteditorsave">../resources/images/box_download_48.png</Resource>
+		<Resource type="image" alias="scripteditordeploy">../resources/images/deploy.png</Resource>
+
+		<Resource type="image" alias="false">../resources/images/delete.png</Resource>
+		<Resource type="image" alias="correct">../resources/images/accept.png</Resource>
+  </ResourceSet>
+  <ResourceSet prefix="task">
+	  <Resource type="image" alias="newproject">../resources/images/model.png</Resource>
+	  <Resource type="image" alias="newsurvey">../resources/images/model.png</Resource>
+	  <Resource type="image" alias="newmodel">../resources/images/model.png</Resource>
+	  <Resource type="image" alias="exportmodel">../resources/images/calendar_background.png</Resource>
+		<Resource type="image" alias="exportsurvey">../resources/images/survey.png</Resource>
+
+    </ResourceSet>
+
+
+</xrs>
